@@ -2,9 +2,11 @@ package main
 
 import (
 	"fmt"
-	"github.com/StevenZack/tools/netToolkit"
 	"net/http"
 	"os"
+
+	"github.com/StevenZack/openurl"
+	"github.com/StevenZack/tools/netToolkit"
 )
 
 func main() {
@@ -20,6 +22,7 @@ func main() {
 	for _, ip := range netToolkit.GetIPs() {
 		fmt.Println("listened on ", ip+port)
 	}
+	openurl.Open("http://localhost" + port)
 	e := http.ListenAndServe(port, nil)
 	if e != nil {
 		fmt.Println("listen error:", e)
