@@ -18,7 +18,7 @@ func main() {
 	flag.Parse()
 
 	http.Handle("/", http.StripPrefix("/", http.FileServer(http.Dir(*dir))))
-	for _, ip := range netToolkit.GetIPs() {
+	for _, ip := range netToolkit.GetIPs(false) {
 		fmt.Println("listened on ", ip+*port)
 	}
 	openurl.Open("http://localhost" + *port)
