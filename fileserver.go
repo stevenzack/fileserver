@@ -50,6 +50,7 @@ func main() {
 }
 
 func (f *fileHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
+	w.Header().Set("Cache-Control", "no-cache, no-store")
 	file := filepath.Base(r.RequestURI)
 	if r.RequestURI == "/" {
 		file = "index.html"
