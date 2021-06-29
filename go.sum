@@ -3,6 +3,8 @@ github.com/BurntSushi/toml v0.3.1/go.mod h1:xHWCNGjB5oqiDr8zfno3MHue2Ht5sIBksp03
 github.com/ClickHouse/clickhouse-go v1.4.3/go.mod h1:EaI/sW7Azgz9UATzd5ZdZHRUhHgv5+JMS9NSr2smCJI=
 github.com/DATA-DOG/go-sqlmock v1.4.1/go.mod h1:f/Ixk793poVmq4qj/V1dPUg2JEAKC73Q5eFN3EC/SaM=
 github.com/StackExchange/wmi v0.0.0-20170410192909-ea383cf3ba6e/go.mod h1:3eOhrUMpNV+6aFIbp5/iudMxNCF27Vw2OZgy4xEx0Fg=
+github.com/StevenZack/mux v1.2.1 h1:7PrDba7LGIpwpUh7ZqtLY+XpRignJo9Dk2w3MBauQ+s=
+github.com/StevenZack/mux v1.2.1/go.mod h1:+Bs9f+KSPsXlphd8klLY26E66NvjCyoFdd+0B3qczv4=
 github.com/StevenZack/openurl v0.0.0-20190430065139-b25363f65ff8 h1:aaBpb+Ig4NNrG4omEUvLdgeizvwTOLGek0BZuuULYYI=
 github.com/StevenZack/openurl v0.0.0-20190430065139-b25363f65ff8/go.mod h1:tGSuG3wQ/DMizcSjaESj69o1TvmVrYuI6NLlF7Dp8iI=
 github.com/StevenZack/tools v1.9.21 h1:RpDv/NX618hj+htD6O7BfPqhOig/4nFScphRsaLyoUk=
