@@ -4,6 +4,7 @@ import (
 	"flag"
 	"fmt"
 	"log"
+	"mime"
 	"net/http"
 	"os"
 	"path/filepath"
@@ -22,6 +23,11 @@ var (
 	useTemplate = flag.Bool("t", false, "Use template")
 	index       = flag.Bool("i", false, "Route 404 to index.html")
 	s           *mux.Server
+	v           = flag.Bool("v", false, "version")
+)
+
+const (
+	currentVersion = "v1.0.0"
 )
 
 type fileHandler struct {
@@ -34,7 +40,10 @@ func init() {
 
 func main() {
 	flag.Parse()
-
+	if *v {
+		fmt.Println(currentVersion)
+		return
+	}
 	s = mux.NewServer(":" + *port)
 	if *useTemplate {
 		s.Handle("/", &fileHandler{root: *dir})
@@ -78,6 +87,7 @@ func fs(w http.ResponseWriter, r *http.Request) {
 		http.Error(w, "dir unsupported", http.StatusInternalServerError)
 		return
 	}
+	w.Header().Set("Content-Type", mime.TypeByExtension(filepath.Ext(path)))
 	http.ServeFile(w, r, path)
 }
 
