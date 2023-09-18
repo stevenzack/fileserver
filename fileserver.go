@@ -4,7 +4,6 @@ import (
 	"flag"
 	"fmt"
 	"log"
-	"mime"
 	"net/http"
 	"os"
 	"path/filepath"
@@ -84,10 +83,9 @@ func fs(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 	if info.IsDir() {
-		http.Error(w, "dir unsupported", http.StatusInternalServerError)
-		return
+		path = filepath.Join(path, "index.html")
 	}
-	w.Header().Set("Content-Type", mime.TypeByExtension(filepath.Ext(path)))
+	// w.Header().Set("Content-Type", mime.TypeByExtension(filepath.Ext(path)))
 	http.ServeFile(w, r, path)
 }
 
