@@ -1,8 +1,2 @@
-github.com/StevenZack/mux v1.2.2 h1:pv69lgwWA+pz2G2sLKPeQsR/NnCXBwhFjZeUa3HpusE=
-github.com/StevenZack/mux v1.2.2/go.mod h1:+Bs9f+KSPsXlphd8klLY26E66NvjCyoFdd+0B3qczv4=
-github.com/StevenZack/openurl v0.0.0-20190430065139-b25363f65ff8 h1:aaBpb+Ig4NNrG4omEUvLdgeizvwTOLGek0BZuuULYYI=
-github.com/StevenZack/openurl v0.0.0-20190430065139-b25363f65ff8/go.mod h1:tGSuG3wQ/DMizcSjaESj69o1TvmVrYuI6NLlF7Dp8iI=
-github.com/StevenZack/tools v1.14.1 h1:+LqvdAImCL2PxMn2rM2jyv2WEUjILCL5ZHtVsCmuSxw=
-github.com/StevenZack/tools v1.14.1/go.mod h1:aQAq46MqU7ACOiDOqC2HQtgs9d4y6nwl13OwojvzWYs=
-golang.org/x/text v0.3.5/go.mod h1:5Zoc/QRtKVWzQhOtBMvqHzDpF6irO9z98xDceosuGiQ=
-golang.org/x/tools v0.0.0-20180917221912-90fa682c2a6e/go.mod h1:n7NCudcB/nEzxVGmLbDWY5pfWTLqBcC2KZ6jyYvM4mQ=
+github.com/stevenzack/openurl v1.0.0 h1:ueK4eQmdGjGsEkRNtsC6oOivwBx5s/JZuvevnZxyxPU=
+github.com/stevenzack/openurl v1.0.0/go.mod h1:gXZVZUF3XvS6iQ6KrtR2PuQnUMkmRup9gp1YEAg5ZBg=
