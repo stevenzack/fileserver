@@ -30,7 +30,7 @@ func init() {
 func main() {
 	flag.Parse()
 
-	http.HandleFunc("GET /", func(w http.ResponseWriter, r *http.Request) {
+	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
 		p := r.URL.Path
 		if strings.HasSuffix(p, "/") {
 			p += "index.html"
@@ -47,6 +47,10 @@ func main() {
 				return
 			}
 
+			if strings.HasSuffix(r.URL.Path, "/") {
+				http.ServeFile(w, r, filepath.Join(*dir, strings.TrimPrefix(r.URL.Path, "/")))
+				return
+			}
 			http.NotFound(w, r)
 			return
 		}
